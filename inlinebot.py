@@ -11,7 +11,7 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler, CallbackCo
 from telegram.utils.helpers import escape_markdown
 from blacklist import get_blacklist
 
-TOKEN = "bot token from botfather"
+TOKEN "token from BotFather"
 
 db = pickledb.load("bot.db", True)
 if not db.get("tokens"):
