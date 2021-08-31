@@ -11,6 +11,8 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler, CallbackCo
 from telegram.utils.helpers import escape_markdown
 from blacklist import get_blacklist
 
+TOKEN = "bot token from botfather"
+
 db = pickledb.load("bot.db", True)
 if not db.get("tokens"):
     db.set("tokens", [])
@@ -182,7 +184,7 @@ def inlinequery(update: Update, context: CallbackContext):
     update.inline_query.answer(results, timeout=3000)
 
 def main() -> None:
-    updater = Updater("1950992969:AAHcWUVzhYuB8EsOZvHczihkgFUNm3yzDds")
+    updater = Updater(TOKEN)
 
     dispatcher = updater.dispatcher
 
